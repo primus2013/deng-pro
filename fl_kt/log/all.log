@@ -1,0 +1,68 @@
+2017-06-20 20:59:03,023 [Dummy-1:7200] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-06-20 20:59:03,029 [Dummy-1:7200] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-06-20 21:02:16,151 [Dummy-1:5348] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-06-20 21:02:16,157 [Dummy-1:5348] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-06-20 21:03:46,493 [Dummy-1:7816] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-06-20 21:03:46,497 [Dummy-1:7816] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-06-20 21:06:45,188 [Dummy-1:1960] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-06-20 21:06:45,194 [Dummy-1:1960] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-06-20 21:06:45,812 [Dummy-1:4252] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-06-20 21:06:45,819 [Dummy-1:4252] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-06-20 21:09:51,694 [Dummy-1:4920] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-06-20 21:09:51,700 [Dummy-1:4920] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-06-20 21:10:38,831 [Dummy-1:8116] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-06-20 21:10:38,835 [Dummy-1:8116] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-06-20 21:11:16,644 [Dummy-1:5340] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-06-20 21:11:16,650 [Dummy-1:5340] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-06-20 21:13:12,111 [Dummy-1:1924] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-06-20 21:13:12,119 [Dummy-1:1924] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-06-22 19:56:25,529 [Dummy-1:1700] [django.db.backends:89] [utils:execute] [DEBUG]- (0.003) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-06-22 19:56:25,571 [Dummy-1:1700] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-06-23 21:18:56,453 [Dummy-1:8900] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-23 21:19:40,693 [Dummy-1:2344] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-23 21:19:40,766 [Dummy-1:2344] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-23 21:19:40,769 [Dummy-1:2344] [django.db.backends:89] [utils:execute] [DEBUG]- (0.002) SHOW FULL TABLES; args=None
+2017-06-23 21:19:40,770 [Dummy-1:2344] [django.db.backends.schema:101] [schema:execute] [DEBUG]- CREATE TABLE `django_migrations` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `app` varchar(255) NOT NULL, `name` varchar(255) NOT NULL, `applied` datetime(6) NOT NULL); (params None)
+2017-06-23 21:19:40,855 [Dummy-1:2344] [django.db.backends:89] [utils:execute] [DEBUG]- (0.084) CREATE TABLE `django_migrations` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `app` varchar(255) NOT NULL, `name` varchar(255) NOT NULL, `applied` datetime(6) NOT NULL); args=None
+2017-06-23 21:19:40,875 [Dummy-1:2344] [django.db.backends:89] [utils:execute] [DEBUG]- (0.020) SELECT engine FROM information_schema.tables WHERE table_name = 'django_migrations'; args=[u'django_migrations']
+2017-06-23 21:19:40,888 [Dummy-1:2344] [django.db.backends:89] [utils:execute] [DEBUG]- (0.006) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-06-23 21:24:52,039 [Dummy-1:5688] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-23 21:28:53,323 [Dummy-1:6184] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-23 21:28:53,604 [Dummy-1:6184] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-23 21:28:53,611 [Dummy-1:6184] [django.db.backends:89] [utils:execute] [DEBUG]- (0.006) SHOW FULL TABLES; args=None
+2017-06-23 21:28:53,644 [Dummy-1:6184] [django.db.backends:89] [utils:execute] [DEBUG]- (0.009) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-06-23 21:30:33,137 [MainThread:4128] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-24 14:44:53,493 [Dummy-1:4204] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-24 14:44:54,174 [Dummy-1:4204] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-24 14:44:54,198 [Dummy-1:4204] [django.db.backends:89] [utils:execute] [DEBUG]- (0.023) SHOW FULL TABLES; args=None
+2017-06-24 14:44:54,255 [Dummy-1:4204] [django.db.backends:89] [utils:execute] [DEBUG]- (0.003) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
