@@ -137,6 +137,8 @@ staticfiles_dirs =(os.path.join(BASE_DIR,'static'))
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = '/'
+
 # 网络下载的日志器
 # 导入模块
 
