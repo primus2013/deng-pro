@@ -1,0 +1,76 @@
+1. 安装python 3.5.1    https://www.python.org/ftp/python/3.5.1/ 下载： python-3.5.1-amd64.exe   
+   （安装python多版本环境，方便不同版本的切换）
+2. 安装后,用管理员权限打开命令窗口，进入python目录下，执行更新pip的包管理，python -m pip install --upgrade pip
+   
+3. 同样，安装virtualenv的虚拟环境，pip install virtualenv==15.0.1 (指定版本安装)
+
+4. 虚拟环境安装好后，要创建虚拟环境，virtualenv django_basic_venv
+     
+5. 切换目录到：C:\Program Files\Python35\django_basic_venv\Scripts
+   执行activate，切换到虚拟环境
+
+6. 切换到虚拟环境后再安装Django: pip install django==1.9.5
+
+7. 再安装pymysql: pip install pymysql==0.7.2
+
+django 1.9.5
+mysql 5.6
+pymysql 0.7.2
+sublime text 3
+pycharm 2016.1
+virtualenv 15.0.1
+
+
+navicat premium 11.1
+http://pan.baidu.com/s/1cE3IIa 密码：ns6p
+
+mysql-installer-community-5.7.10.0
+http://pan.baidu.com/s/1jHLyKWQ 密码：ubku
+
+
+开始编程环境搭建：
+1.注意建立虚拟环境时，创建的文件夹不能有只读属性，否则pychrome将无法新建项目
+2.用pychrom新建项目，项目名和APP名不要取成一样的
+3.在pychrom中添加相关需要的包，如pillow等
+4.修改setting.py文件，在其中增加：staticfiles_dirs=(
+         os.path.join(BASE_DIR, 'static')
+    )项，并在pychrom的项目中新建一个static的目录，与templates在同意级别上
+5.在static目录下放置css,js,images等网页静态文件，在templates目录下放置网页文件(html文件）
+6.在views.py 中加入：
+     def index(request):
+          return render(request,'index.html',locals()) 函数
+  在urls.py中加入：
+     from acc.views import index
+
+     urlpatterns = [
+         url(r'^admin/', admin.site.urls),
+         url(r'^$',index, name='index'),
+       ]
+   这样就把网页index.html与项目关联起来了
+7.在index.html中的顶部，加入{% load staticfiles %} 设定静态文件路径，并且在链接、脚本等地方加入
+  像 {% static 'css/index.css %} 或 {% static 'js/jquery.min.js' %} 等等的标签
+
+出现中文的模块，在文件开始处添加：# -*- coding: utf-8 -*-
+
+8.日志器的使用：在项目的根目录下建立日志文件的存放目录LOG
+
+   在view.py 写入：import logging
+
+9.配置Settings.py的配置信息作为全局使用
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
