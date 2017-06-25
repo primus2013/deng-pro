@@ -193,7 +193,7 @@ LOGGING = {
             'backupCount': 5,
             'formatter': 'standard',
         },
-        'scprits_handler': {
+        'scripts_handler': {
             'level': 'DEBUG',
             'class': 'logging.handlers.RotatingFileHandler',
             'filename': 'log/script.log',
@@ -214,7 +214,7 @@ LOGGING = {
             'propagate': False,
         },
         'scripts': {
-            'handlers': ['scprits_handler'],
+            'handlers': ['scripts_handler'],
             'level': 'INFO',
             'propagate': False
         },

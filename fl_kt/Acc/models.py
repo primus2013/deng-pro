@@ -14,21 +14,21 @@ class User(AbstractUser):
     mobil=models.CharField(max_length=11, blank=True, null=True, unique=True, verbose_name='手机号码')
 
     class meta:
-        verbose_name='用户'
+        verbose_name='用户列表'
         verbose_nane_plural=verbose_name
         ordering=['-id']
 
         def __unicode__(self):
             return self.username
 
-
+# 医院字典
 class Yyxx(models.Model):
     yymc = models.CharField(max_length=50, verbose_name='医院名称')
     shengf = models.CharField(max_length=50, verbose_name='所在省份')
     dengj = models.CharField(max_length=50, verbose_name='医院等级')
 
     class Meta:
-        verbose_name = '医院名称'
+        verbose_name = '医院字典'
         verbose_name_plural = verbose_name
 
         def __unicode__(self):
@@ -37,13 +37,14 @@ class Yyxx(models.Model):
 
 # 医院入组情况表
 class Rzxx(models.Model):
-    yymc=models.ForeignKey(Yyxx,verbose_name='医院名称')
+    yymc=models.ForeignKey(Yyxx, verbose_name='医院名称')
     sbcj=models.CharField(max_length=50, verbose_name='设备厂家')
     sbxh=models.CharField(max_length=50, verbose_name='设备型号')
     rzsj=models.DateTimeField(auto_now_add=True, verbose_name='入组时间')
+    bz=models.TextField(max_length=500, null=True, verbose_name='备注')
 
     class Meta:
-        verbose_name='医院名称'
+        verbose_name='入组信息'
         verbose_name_plural = verbose_name
 
         def __unicode__(self):
@@ -56,7 +57,7 @@ class Sbcj(models.Model):
     szdq=models.CharField(max_length=50, verbose_name='所在地区')
 
     class Meta:
-        verbose_name = '厂家名称'
+        verbose_name = '厂家字典'
         verbose_name_plural=verbose_name
 
         def __unicode__(self):
@@ -69,7 +70,7 @@ class Sbxh(models.Model):
     leix=models.CharField(max_length=50, verbose_name='设备类型')
 
     class Meta:
-        verbose_name='设备型号'
+        verbose_name='设备字典'
         verbose_name_plural=verbose_name
 
         def __unicode__(self):
