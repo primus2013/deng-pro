@@ -80,12 +80,14 @@
 7.在django中的tool菜单下：run manager.py task...进入命令提示行，
   在提示行后输入：makemigrations回车，在migration目录下生成脚本文件。
   第一次生成数据库时，使用syncdb命令生成数据库，因为需要生成一个管理员账户。
-  **在运行makemigrations时，如果提示有关“You're using the staticfiles app without having set the STATIC_ROOT setting 
+  
+**在运行makemigrations时，如果提示有关“You're using the staticfiles app without having set the STATIC_ROOT setting 
      to a filesystem path”这样的错误时，解决办法：在setting.py文件中增加：STATIC_URL = '/path_to_your_statics'
      和STATIC_ROOT = '/'
 
 
-
+****建立Admin的超级用户方法：
+    在manage.py控制台命令行输入：createsuperuser
 
 
 

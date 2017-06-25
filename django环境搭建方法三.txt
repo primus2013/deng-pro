@@ -1,0 +1,78 @@
+
+
+一.配置使用admin模块：
+1.在INSTALLED_APPS中，添加django.contrib.admin（该标准库还包括:.auth  .sessions   .comment等）
+2.配置urls.py
+  url(r'^admin/'，include(admin.site.urls))
+3.在admin注册的Model，（默认方式和自定义方式），注意Model中关于admin的一些配置。
+  该部分的官方文档：https://docs.djangoproject.com/en/1.8/ref/contrib/admin/
+以上内容在用Django自动生成项目时已经产生加入。
+
+二.在loaclhost:8000/admin 输入网址后进入登录页面
+1.  在app下的Admin.py中进行配置Moduls内容。
+  from models import *         导入配置好的Models
+  admin.site.register(User)    逐个注册#Register Models
+ 
+  ****admin模块提供了一个好的后台管理模块，也可已使用非官方的Xadmin模块，表现更丰富。
+
+2.可以用自定义的方法定义models，比如：
+  在admin.py模块中加入：
+   class Rzxx(admin.ModelAdmin)
+     fields=('yymc','sbcj','sbxh',) 填入字段来选择希望显示的字段
+   等等，还有其他的分类、排除等属性
+
+三.引入富文本编辑器的方法：以kindeditor为例
+   1. 下载kindeditor
+       下载后解压,拷贝到static目录下的JS目录中（pychram中操作）
+   2. 定义ModelAdmin的媒体文件
+     class Media:
+     js=(
+        '/static/js/kindeditor-4.1.10/kindeditor-min.js',
+        '/static/js/kindeditor-4.1.10/lang/zh_CN.js',
+        '/static/js/kindeditor-4.1.10/config.js',
+      )
+    3.修改kindeditor的配置文件
+      在/kindeditor-4.1.10下创建一个config.js的文件
+      在官网的使用说明里拷贝出：KindEditor.ready(function(K) {
+                window.editor = K.create('#editor_id');
+        });写入config.js中  并增加参数：{width:500,height:200}   
+        即：K.create('#editor_id'，{width:500,height:200});
+        同时需要将#editor_id写为你要使用的字段如：textarea[name=bz]
+
+
+
+
+   
+    
+
+
+
+
+
+
+
+
+
+Alt+Enter 自动添加包
+Ctrl+t SVN更新
+Ctrl+k SVN提交
+Ctrl + / 注释(取消注释)选择的行
+Ctrl+Shift+F 高级查找
+Ctrl+Enter 补全
+Shift + Enter 开始新行
+TAB Shift+TAB 缩进/取消缩进所选择的行
+Ctrl + Alt + I 自动缩进行
+Ctrl + Y 删除当前插入符所在的行
+Ctrl + D 复制当前行、或者选择的块
+Ctrl + Shift + J 合并行
+Ctrl + Shift + V 从最近的缓存区里粘贴
+Ctrl + Delete 删除到字符结尾
+Ctrl + Backspace 删除到字符的开始
+Ctrl + NumPad+/- 展开或者收缩代码块
+Ctrl + Shift + NumPad+ 展开所有的代码块
+Ctrl + Shift + NumPad- 收缩所有的代码块
+
+
+
+
+
