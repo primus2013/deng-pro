@@ -281,3 +281,12 @@ Traceback (most recent call last):
   File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 642, in get_form
     % (e, self.__class__.__name__))
 FieldError: Unknown field(s) (rzsj) specified for Rzxx. Check fields/fieldsets/exclude attributes of class RzxxAdmin.
+2017-06-26 19:32:47,368 [Thread-4:6696] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-06-26 19:32:58,477 [Thread-5:3108] [django.request:182] [base:get_response] [WARNING]- Not Found: /ADMIN
+2017-06-26 19:34:07,036 [Thread-9:7296] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-06-26 20:57:45,842 [Thread-4:9776] [django.request:182] [base:get_response] [WARNING]- Not Found: /fl_kt/static/js/kindeditor-4.1.10/kindeditor-min.js
+2017-06-26 20:57:46,005 [Thread-7:9132] [django.request:182] [base:get_response] [WARNING]- Not Found: /fl_kt/static/js/kindeditor-4.1.10/kindeditor-min.js
+2017-06-26 20:57:53,601 [Thread-11:9000] [django.request:182] [base:get_response] [WARNING]- Not Found: /fl_kt/static/js/kindeditor-4.1.10/kindeditor-min.js
+2017-06-26 21:25:55,673 [Thread-4:9212] [django.request:182] [base:get_response] [WARNING]- Not Found: /js/kindeditor-4.1.10/kindeditor-min.js
+2017-06-26 21:25:55,865 [Thread-7:7084] [django.request:182] [base:get_response] [WARNING]- Not Found: /js/kindeditor-4.1.10/kindeditor-min.js
+2017-06-26 21:26:03,522 [Thread-11:7064] [django.request:182] [base:get_response] [WARNING]- Not Found: /js/kindeditor-4.1.10/kindeditor-min.js

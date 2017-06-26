@@ -39,7 +39,22 @@
         即：K.create('#editor_id'，{width:500,height:200});
         同时需要将#editor_id写为你要使用的字段如：textarea[name=bz]
 
+ 注意：默认情况下django会在app目录下的static子目录查找静态资源.我的项目的static目录是在和app（Acc）平行的位置上。
 
+你的配置有问题, 默认情况下django会在app目录下的static子目录查找静态资源.
+
+你可以这样:
+
+STATIC_URL = "/static"
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+    '/home/cjyfff/simple_blog/code/static/',
+)
+模板中这样写:
+
+{% load staticfiles %}
+<script src="{% static "css/bootstrap.css" %}"></script>
 
 
    

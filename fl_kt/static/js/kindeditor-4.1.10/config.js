@@ -1,8 +1,14 @@
 /**
- * Created by PRIMUS on 2017/6/25.
+ * Created by PRIMUS on 2017/6/26.
  */
+
+
 KindEditor.ready(function(K) {
-                window.editor = K.create('textarea[name=bz]',
-                {width:500,
-                height:200});
+                window.editor = K.create('textarea[name="id_bz"]', {
+                        height:200,
+                        width:800
+                    });
+
         });
+
+
