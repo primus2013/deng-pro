@@ -290,3 +290,9 @@ FieldError: Unknown field(s) (rzsj) specified for Rzxx. Check fields/fieldsets/e
 2017-06-26 21:25:55,673 [Thread-4:9212] [django.request:182] [base:get_response] [WARNING]- Not Found: /js/kindeditor-4.1.10/kindeditor-min.js
 2017-06-26 21:25:55,865 [Thread-7:7084] [django.request:182] [base:get_response] [WARNING]- Not Found: /js/kindeditor-4.1.10/kindeditor-min.js
 2017-06-26 21:26:03,522 [Thread-11:7064] [django.request:182] [base:get_response] [WARNING]- Not Found: /js/kindeditor-4.1.10/kindeditor-min.js
+2017-06-27 20:15:23,236 [Thread-3:6424] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-06-27 21:31:46,025 [Thread-25:11216] [django.request:182] [base:get_response] [WARNING]- Not Found: /uploads/avatar/2016/06/10号北京到兰州.PNG
+2017-06-27 21:33:25,160 [Thread-31:5060] [django.request:182] [base:get_response] [WARNING]- Not Found: /mypro/fl_kt/uploads/avatar/2017/06
+2017-06-27 21:33:40,230 [Thread-37:1220] [django.request:182] [base:get_response] [WARNING]- Not Found: /fl_kt/uploads/avatar/2017/06
+2017-06-27 21:33:51,746 [Thread-43:10960] [django.request:182] [base:get_response] [WARNING]- Not Found: /uploads/avatar/2017/06
+2017-06-27 21:34:05,551 [Thread-48:6972] [django.request:182] [base:get_response] [WARNING]- Not Found: /uploads/avatar/2017/06/

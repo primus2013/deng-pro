@@ -15,15 +15,15 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-
-# urlpatterns = [
-#     url(r'^admin/', admin.site.urls),
-# ]
+from django.conf import settings
 
 from Acc.views import index
 
 urlpatterns = [
-         url(r'^admin/', admin.site.urls),
-         url(r'^$', index, name='index'),
+        url(r"^uploads/(?P<path>.*)$", \
+            "django.views.static.serve", \
+            {"document_root": settings.MEDIA_ROOT,}),
+        url(r'^admin/', admin.site.urls),
+        url(r'^$', index, name='index'),
        ]
 

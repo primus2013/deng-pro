@@ -135,11 +135,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
-staticfiles_dirs =(os.path.join(BASE_DIR,'static'))
+staticfiles_dirs =(os.path.join(BASE_DIR, 'static'))
 
 STATIC_URL = '/static/'
 
 STATIC_ROOT = '/'
+
+MEDIA_URL = '/uploads/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads',)
+
 
 # 网络下载的日志器
 # 导入模块

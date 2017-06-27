@@ -9,7 +9,8 @@ from django.contrib.auth.models import AbstractUser   # 此处是用户数据模
 
 
 class User(AbstractUser):
-    avatar=models.ImageField(upload_to='avatar/%Y/%m', default='avatar/default.png', max_length=200, )
+    avatar=models.ImageField(upload_to='avatar/%Y/%m', default='avatar/default.png', max_length=200, blank=True,
+                             null=True, verbose_name='用户头像' )
     qq=models.CharField(max_length=20, blank=True, null=True, verbose_name='QQ号码')
     mobil=models.CharField(max_length=11, blank=True, null=True, unique=True, verbose_name='手机号码')
 

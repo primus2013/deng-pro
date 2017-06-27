@@ -5,8 +5,8 @@
 
 KindEditor.ready(function(K) {
                 window.editor = K.create('textarea[name="bz"]', {
-                        height:200,
-                        width:200
+                        height:500,
+                        width:800
                     });
 
         });
