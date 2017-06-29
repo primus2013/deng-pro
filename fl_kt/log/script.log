@@ -296,3 +296,5 @@ FieldError: Unknown field(s) (rzsj) specified for Rzxx. Check fields/fieldsets/e
 2017-06-27 21:33:40,230 [Thread-37:1220] [django.request:182] [base:get_response] [WARNING]- Not Found: /fl_kt/uploads/avatar/2017/06
 2017-06-27 21:33:51,746 [Thread-43:10960] [django.request:182] [base:get_response] [WARNING]- Not Found: /uploads/avatar/2017/06
 2017-06-27 21:34:05,551 [Thread-48:6972] [django.request:182] [base:get_response] [WARNING]- Not Found: /uploads/avatar/2017/06/
+2017-06-29 21:45:46,538 [Thread-6:7160] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-06-29 22:02:01,042 [Thread-11:14648] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
