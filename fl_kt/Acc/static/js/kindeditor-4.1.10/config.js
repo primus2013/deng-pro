@@ -7,7 +7,7 @@ KindEditor.ready(function(K) {
                 window.editor = K.create('textarea[name="bz"]', {
                         height:"500px",
                         width:"800px",
-                    uploadJson:'/admin/upload/kindeditor'
+                        uploadJson:'/admin/upload/kindeditor'
                     });
 
         });
