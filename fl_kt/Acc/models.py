@@ -31,6 +31,7 @@ class Yyxx(models.Model):
     class Meta:
         verbose_name = '医院字典'
         verbose_name_plural = verbose_name
+        ordering = ['-yymc', 'dengj']
 
         def __unicode__(self):
             return self.yymc

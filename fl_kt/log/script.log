@@ -605,3 +605,59 @@ UnicodeDecodeError: 'utf8' codec can't decode byte 0xcd in position 65: invalid 
 2017-07-02 20:59:20,125 [Thread-789:28236] [django.request:182] [base:get_response] [WARNING]- Not Found: /images/06.jpg
 2017-07-02 21:09:27,759 [Thread-857:9280] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
 2017-07-02 21:09:33,519 [Thread-858:10424] [django.request:182] [base:get_response] [WARNING]- Not Found: /amdin
+2017-07-03 19:36:06,345 [Thread-19:26388] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-07-03 19:56:26,500 [Thread-345:31592] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-07-03 21:01:36,482 [Thread-2:27052] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\mypro\fl_kt\Acc\views.py", line 21, in index
+    return render(request, 'index.html', {'yy_list': yy_list})
+UnboundLocalError: local variable 'yy_list' referenced before assignment
+2017-07-03 21:10:48,410 [Thread-8:29376] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\mypro\fl_kt\Acc\views.py", line 21, in index
+    return render(request, 'index.html', {'yy_list': yy_list})
+UnboundLocalError: local variable 'yy_list' referenced before assignment
+2017-07-03 21:13:20,084 [Thread-2:26712] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\mypro\fl_kt\Acc\views.py", line 21, in index
+    return render(request, 'base.html', {'yy_list': yy_list})
+UnboundLocalError: local variable 'yy_list' referenced before assignment
+2017-07-03 21:16:29,500 [Thread-2:8460] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\mypro\fl_kt\Acc\views.py", line 21, in index
+    return render(request, 'index.html', {'yy_list': yy_list})
+UnboundLocalError: local variable 'yy_list' referenced before assignment
+2017-07-03 21:16:35,447 [Thread-3:2556] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\mypro\fl_kt\Acc\views.py", line 21, in index
+    return render(request, 'index.html', {'yy_list': yy_list})
+UnboundLocalError: local variable 'yy_list' referenced before assignment
+2017-07-03 21:16:51,903 [Thread-6:31988] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\mypro\fl_kt\Acc\views.py", line 21, in index
+    return render(request, 'index.html', {'yy_list': yy_list})
+UnboundLocalError: local variable 'yy_list' referenced before assignment

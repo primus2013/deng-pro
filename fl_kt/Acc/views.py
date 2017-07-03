@@ -15,7 +15,7 @@ def global_setting(request):
 
 def index(request):
     try:
-        pass
+        yy_list = Yyxx.objects.all()[:4]
     except Exception as e:
         logger.error(e)
-    return render(request, 'index.html', locals())
+    return render(request, 'index.html', {'yy_list': yy_list})
