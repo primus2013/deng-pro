@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.conf import settings
 from models import *
+from django.core.paginator import Paginator,InvalidPage,EmptyPage,PageNotAnInteger
+
 
 import logging
 

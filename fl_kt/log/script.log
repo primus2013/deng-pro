@@ -661,3 +661,411 @@ Traceback (most recent call last):
   File "C:\mypro\fl_kt\Acc\views.py", line 21, in index
     return render(request, 'index.html', {'yy_list': yy_list})
 UnboundLocalError: local variable 'yy_list' referenced before assignment
+2017-07-04 20:45:18,789 [Thread-20:17004] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-07-04 20:45:38,033 [Thread-42:32096] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-07-04 20:54:09,723 [Thread-6:27356] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/Acc/rzxx/add/
+Traceback (most recent call last):
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 1437, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 1367, in changeform_view
+    ModelForm = self.get_form(request, obj)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 642, in get_form
+    % (e, self.__class__.__name__))
+FieldError: Unknown field(s) (rzsj) specified for Rzxx. Check fields/fieldsets/exclude attributes of class RzxxAdmin.
+2017-07-04 20:55:48,953 [Thread-18:13140] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/Acc/rzxx/add/
+Traceback (most recent call last):
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 1437, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 1367, in changeform_view
+    ModelForm = self.get_form(request, obj)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 642, in get_form
+    % (e, self.__class__.__name__))
+FieldError: Unknown field(s) (rzsj) specified for Rzxx. Check fields/fieldsets/exclude attributes of class RzxxAdmin.
+2017-07-04 21:03:00,467 [Thread-3:18164] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/Acc/rzxx/add/
+Traceback (most recent call last):
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 1437, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 1367, in changeform_view
+    ModelForm = self.get_form(request, obj)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 642, in get_form
+    % (e, self.__class__.__name__))
+FieldError: Unknown field(s) (rzsj) specified for Rzxx. Check fields/fieldsets/exclude attributes of class RzxxAdmin.
+2017-07-04 21:04:13,446 [Thread-8:26220] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/Acc/rzxx/add/
+Traceback (most recent call last):
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 1437, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 1367, in changeform_view
+    ModelForm = self.get_form(request, obj)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 642, in get_form
+    % (e, self.__class__.__name__))
+FieldError: Unknown field(s) (rzsj) specified for Rzxx. Check fields/fieldsets/exclude attributes of class RzxxAdmin.
+2017-07-04 21:04:32,545 [Thread-21:380] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/Acc/rzxx/add/
+Traceback (most recent call last):
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 1437, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 1367, in changeform_view
+    ModelForm = self.get_form(request, obj)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 642, in get_form
+    % (e, self.__class__.__name__))
+FieldError: Unknown field(s) (rzsj) specified for Rzxx. Check fields/fieldsets/exclude attributes of class RzxxAdmin.
+2017-07-04 21:05:21,668 [Thread-3:14712] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/Acc/rzxx/add/
+Traceback (most recent call last):
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 1437, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 1367, in changeform_view
+    ModelForm = self.get_form(request, obj)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 642, in get_form
+    % (e, self.__class__.__name__))
+FieldError: Unknown field(s) (RZSJJ) specified for Rzxx. Check fields/fieldsets/exclude attributes of class RzxxAdmin.
+2017-07-04 21:06:34,503 [Thread-3:26924] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/Acc/rzxx/add/
+Traceback (most recent call last):
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 1437, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 1367, in changeform_view
+    ModelForm = self.get_form(request, obj)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 642, in get_form
+    % (e, self.__class__.__name__))
+FieldError: Unknown field(s) (kaishi) specified for Rzxx. Check fields/fieldsets/exclude attributes of class RzxxAdmin.
+2017-07-04 21:23:39,134 [Thread-54:29864] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/Acc/rzxx/add/
+Traceback (most recent call last):
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 1437, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 1367, in changeform_view
+    ModelForm = self.get_form(request, obj)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 642, in get_form
+    % (e, self.__class__.__name__))
+FieldError: Unknown field(s) (kaishi) specified for Rzxx. Check fields/fieldsets/exclude attributes of class RzxxAdmin.
+2017-07-04 21:24:20,180 [Thread-2:16672] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/Acc/rzxx/add/
+Traceback (most recent call last):
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 1437, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 1367, in changeform_view
+    ModelForm = self.get_form(request, obj)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 642, in get_form
+    % (e, self.__class__.__name__))
+FieldError: Unknown field(s) (rzsj) specified for Rzxx. Check fields/fieldsets/exclude attributes of class RzxxAdmin.
+2017-07-04 21:24:45,901 [Thread-2:6064] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/Acc/rzxx/add/
+Traceback (most recent call last):
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 1437, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 1367, in changeform_view
+    ModelForm = self.get_form(request, obj)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 642, in get_form
+    % (e, self.__class__.__name__))
+FieldError: Unknown field(s) (rzsj) specified for Rzxx. Check fields/fieldsets/exclude attributes of class RzxxAdmin.
+2017-07-04 21:27:03,171 [Thread-2:16068] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/Acc/rzxx/add/
+Traceback (most recent call last):
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 1437, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 1367, in changeform_view
+    ModelForm = self.get_form(request, obj)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 642, in get_form
+    % (e, self.__class__.__name__))
+FieldError: Unknown field(s) (rzsj) specified for Rzxx. Check fields/fieldsets/exclude attributes of class RzxxAdmin.
+2017-07-04 21:28:08,927 [Thread-8:10164] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/Acc/rzxx/add/
+Traceback (most recent call last):
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 1437, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 1367, in changeform_view
+    ModelForm = self.get_form(request, obj)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 642, in get_form
+    % (e, self.__class__.__name__))
+FieldError: Unknown field(s) (rzsj) specified for Rzxx. Check fields/fieldsets/exclude attributes of class RzxxAdmin.
+2017-07-04 21:32:58,940 [Thread-2:27144] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/Acc/rzxx/add/
+Traceback (most recent call last):
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 1437, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 1367, in changeform_view
+    ModelForm = self.get_form(request, obj)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 642, in get_form
+    % (e, self.__class__.__name__))
+FieldError: Unknown field(s) (bz1) specified for Rzxx. Check fields/fieldsets/exclude attributes of class RzxxAdmin.
+2017-07-04 21:35:53,891 [Thread-2:20464] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/Acc/rzxx/add/
+Traceback (most recent call last):
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 1437, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 1367, in changeform_view
+    ModelForm = self.get_form(request, obj)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 642, in get_form
+    % (e, self.__class__.__name__))
+FieldError: Unknown field(s) (rzsj) specified for Rzxx. Check fields/fieldsets/exclude attributes of class RzxxAdmin.

@@ -36,15 +36,39 @@ class Yyxx(models.Model):
         def __unicode__(self):
             return self.yymc
 
+# 厂家字典
+class Sbcj(models.Model):
+    cjmc = models.CharField(max_length=50, null=True, verbose_name='厂家名称')
+    szdq = models.CharField(max_length=50, verbose_name='所在地区')
+
+    class Meta:
+        verbose_name = '厂家字典'
+        verbose_name_plural = verbose_name
+
+        def __unicode__(self):
+            return self.cjmc
+
+# 设备字典
+class Sbxh(models.Model):
+    sbxh = models.CharField(max_length=50, verbose_name='设备型号')
+    leix = models.CharField(max_length=50, verbose_name='设备类型')
+
+    class Meta:
+        verbose_name = '设备字典'
+        verbose_name_plural = verbose_name
+
+        def __unicode__(self):
+            return self.sbxh
 
 # 医院入组情况表
 class Rzxx(models.Model):
-    yymc=models.ForeignKey(Yyxx, verbose_name='医院名称')
-    sbcj=models.CharField(max_length=50, verbose_name='设备厂家')
-    sbxh=models.CharField(max_length=50, verbose_name='设备型号')
-    rzsj=models.DateTimeField(auto_now_add=True, verbose_name='入组时间')
+    yymc=models.ForeignKey(Yyxx, null=True, verbose_name='医院名称')
+    # sbcj=models.CharField(max_length=50, null=True, verbose_name='设备厂家')
+    sbcj=models.ForeignKey(Sbcj, null=True, verbose_name='设备厂家')
+    sbxh=models.ForeignKey(Sbxh, max_length=50, verbose_name='设备型号')
+    # rzsj=models.DateTimeField(auto_now_add=True, verbose_name='入组时间')
     bz=models.TextField(max_length=500, null=True, verbose_name='备注')
-
+    rzsj = models.DateTimeField(verbose_name='入组时间')
     class Meta:
         verbose_name='入组信息'
         verbose_name_plural = verbose_name
@@ -53,27 +77,5 @@ class Rzxx(models.Model):
             return self.yymc
 
 
-# 厂家字典
-class Sbcj(models.Model):
-    cjmc=models.CharField(max_length=50, verbose_name='厂家名称')
-    szdq=models.CharField(max_length=50, verbose_name='所在地区')
-
-    class Meta:
-        verbose_name = '厂家字典'
-        verbose_name_plural=verbose_name
-
-        def __unicode__(self):
-            return self.cjmc
 
 
-# 设备字典
-class Sbxh(models.Model):
-    sbxh=models.CharField(max_length=50, verbose_name='设备型号')
-    leix=models.CharField(max_length=50, verbose_name='设备类型')
-
-    class Meta:
-        verbose_name='设备字典'
-        verbose_name_plural=verbose_name
-
-        def __unicode__(self):
-            return self.sbxh

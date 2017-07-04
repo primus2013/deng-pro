@@ -7,8 +7,8 @@ from models import *
 
 
 class RzxxAdmin(admin.ModelAdmin):
-    # fields = ('yymc', 'sbcj', 'sbxh', 'rzsj', 'bz',)
-    fields = ('yymc', 'sbcj', 'sbxh', 'bz',)
+    fields = ('rzsj','yymc','sbcj','sbxh','bz',)
+    # fields = ('yymc', 'sbcj', 'sbxh', 'bz',)
     # 在类中引入富媒体文件
 
     class Media:
