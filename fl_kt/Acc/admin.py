@@ -20,6 +20,24 @@ class RzxxAdmin(admin.ModelAdmin):
         )
 
 
+class AdminSecurityGroup(admin.ModelAdmin):
+    object = None
+
+    def get_object(self, request, object_id):
+        self.object = super(AdminSecurityGroup, self).get_object(request, object_id)
+        return self.object
+
+    def formfield_for_manytomany(self, db_field, request, **kwargs):
+        if db_field.name.lower() == 'securities':
+            if self.object and self.object.market:
+                kwargs['queryset'] = Security.objects.filter(market=self.object.market)
+            else:
+                kwargs['queryset'] = EmptyQuerySet()
+        return super(AdminSecurityGroup, self).formfield_for_manytomany(db_field, request, **kwargs)
+
+
+
+
 admin.site.register(User)
 admin.site.register(Yyxx)
 admin.site.register(Rzxx, RzxxAdmin)

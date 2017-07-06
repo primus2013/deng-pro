@@ -14,15 +14,17 @@ class User(AbstractUser):
     qq=models.CharField(max_length=20, blank=True, null=True, verbose_name='QQ号码')
     mobil=models.CharField(max_length=11, blank=True, null=True, unique=True, verbose_name='手机号码')
 
-    class meta:
+    class Meta:
         verbose_name='用户列表'
-        verbose_nane_plural=verbose_name
+        verbose_name_plural=verbose_name
         ordering=['-id']
 
         def __unicode__(self):
             return self.username
 
 # 医院字典
+
+
 class Yyxx(models.Model):
     yymc = models.CharField(max_length=50, verbose_name='医院名称')
     shengf = models.CharField(max_length=50, verbose_name='所在省份')
@@ -33,8 +35,9 @@ class Yyxx(models.Model):
         verbose_name_plural = verbose_name
         ordering = ['-yymc', 'dengj']
 
-        def __unicode__(self):
-            return self.yymc
+    def __unicode__(self):
+        return self.yymc
+
 
 # 厂家字典
 class Sbcj(models.Model):
@@ -45,20 +48,22 @@ class Sbcj(models.Model):
         verbose_name = '厂家字典'
         verbose_name_plural = verbose_name
 
-        def __unicode__(self):
-            return self.cjmc
+    def __unicode__(self):
+        return self.cjmc
 
 # 设备字典
 class Sbxh(models.Model):
     sbxh = models.CharField(max_length=50, verbose_name='设备型号')
     leix = models.CharField(max_length=50, verbose_name='设备类型')
+    sscj = models.ForeignKey(Sbcj, default='', verbose_name='所属厂家')
+    sbdj = models.CharField(max_length=50, default='', null=True, verbose_name='设备等级')
 
     class Meta:
         verbose_name = '设备字典'
         verbose_name_plural = verbose_name
 
-        def __unicode__(self):
-            return self.sbxh
+    def __unicode__(self):
+        return self.sbxh
 
 # 医院入组情况表
 class Rzxx(models.Model):
@@ -73,9 +78,21 @@ class Rzxx(models.Model):
         verbose_name='入组信息'
         verbose_name_plural = verbose_name
 
-        def __unicode__(self):
-            return self.yymc
+    def __unicode__(self):
+        return self.yymc
 
 
+class Market(models.Model):
+    name = models.CharField(max_length=255)
 
 
+class Security(models.Model):
+    name = models.CharField(max_length=255)
+    market = models.ForeignKey(Market)
+
+
+class SecurityGroup(models.Model):
+    name = models.CharField(max_length=255)
+    market = models.ForeignKey(Market)
+    # securities = models.ManyToManyField(Security)
+    securities = models.ManyToManyField(Security, blank=True)
