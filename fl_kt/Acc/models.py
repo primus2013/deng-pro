@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 
+from django import forms
 # Create your models here.
 
 from django.contrib.auth.models import AbstractUser   # 此处是用户数据模型可以继承django已有的AbstractUser模型用（是一个关于用户的）
@@ -81,18 +82,40 @@ class Rzxx(models.Model):
     def __unicode__(self):
         return self.yymc
 
-
-class Market(models.Model):
-    name = models.CharField(max_length=255)
-
-
-class Security(models.Model):
-    name = models.CharField(max_length=255)
-    market = models.ForeignKey(Market)
+# 实验下拉联动
+# ---------------------------------------
+# Js方法实验
 
 
-class SecurityGroup(models.Model):
-    name = models.CharField(max_length=255)
-    market = models.ForeignKey(Market)
-    # securities = models.ManyToManyField(Security)
-    securities = models.ManyToManyField(Security, blank=True)
+class FooModel(models.Model):
+    province = models.CharField(max_length=50, verbose_name='省', choices=())
+    city= models.CharField(max_length=50, verbose_name='市', choices=())
+    area= models.CharField(max_length=50, verbose_name='区', choices=())
+
+# ---------------------------------------
+
+class FileType(models.Model):
+    name=models.CharField(max_length=128)
+
+    def __unicode__(self):
+        return self.name
+
+class ManagedFile(models.Model):
+    type = models.ForeignKey(FileType)
+    content = models.CharField(max_length=50)
+
+    def __unicode__(self):
+        return self.content
+
+class Tag(models.Model):
+    type = models.ForeignKey(FileType)
+    m_file = models.ForeignKey(ManagedFile)
+
+    def __unicode__(self):
+        return self.m_file
+
+    # def clean(self):
+    #     if self.m_file is None:
+    #         return
+    #     if self.type != self.m_file.type:
+    #         raise forms.ValidationError("File type does not match Tag type")

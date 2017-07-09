@@ -1069,3 +1069,33 @@ Traceback (most recent call last):
   File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 642, in get_form
     % (e, self.__class__.__name__))
 FieldError: Unknown field(s) (rzsj) specified for Rzxx. Check fields/fieldsets/exclude attributes of class RzxxAdmin.
+2017-07-09 17:23:18,474 [Thread-16:28460] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-07-09 17:23:37,829 [Thread-30:17332] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/Acc/foomodel/add/
+Traceback (most recent call last):
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 1437, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 1367, in changeform_view
+    ModelForm = self.get_form(request, obj)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 642, in get_form
+    % (e, self.__class__.__name__))
+FieldError: Unknown field(s) (sbcj, rzsj, yymc, bz, sbxh) specified for FooModel. Check fields/fieldsets/exclude attributes of class RzxxAdmin.
