@@ -7,18 +7,14 @@ from django.core.paginator import Paginator,InvalidPage,EmptyPage,PageNotAnInteg
 import logging
 
 
-
-
-
 # Create your views here.
+
 logger=logging.getLogger('Acc.views')
 
 
 def global_setting(request):
     return {'SITE_NAME': settings.SITE_NAME,
             'SITE_DESC': settings.SITE_DESC,}
-
-
 
 
 def index(request):
@@ -37,6 +33,6 @@ def index(request):
     except Exception as e:
         logger.error(e)
     # return render(request, 'index.html', {'yy_list': yy_list})
-    #在返回语句中的列表里添加：'article_list': article_list 就可以把变量传给页面模板
-    #但在实际使用中，{....}里的列表可以用locals()来代替：
+    # 在返回语句中的列表里添加：'article_list': article_list 就可以把变量传给页面模板
+    # 但在实际使用中，{....}里的列表可以用locals()来代替：
     return render(request,'index.html',locals())

@@ -53,6 +53,8 @@ class Sbcj(models.Model):
         return self.cjmc
 
 # 设备字典
+
+
 class Sbxh(models.Model):
     sbxh = models.CharField(max_length=50, verbose_name='设备型号')
     leix = models.CharField(max_length=50, verbose_name='设备类型')
@@ -67,6 +69,8 @@ class Sbxh(models.Model):
         return self.sbxh
 
 # 医院入组情况表
+
+
 class Rzxx(models.Model):
     yymc=models.ForeignKey(Yyxx, null=True, verbose_name='医院名称')
     # sbcj=models.CharField(max_length=50, null=True, verbose_name='设备厂家')
@@ -86,19 +90,38 @@ class Rzxx(models.Model):
 # ---------------------------------------
 # Js方法实验
 
-
-class FooModel(models.Model):
-    province = models.CharField(max_length=50, verbose_name='省', choices=())
-    city= models.CharField(max_length=50, verbose_name='市', choices=())
-    area= models.CharField(max_length=50, verbose_name='区', choices=())
+# class FooModel(models.Model):
+#     province = models.CharField(max_length=50, verbose_name='省', choices=())
+#     city= models.CharField(max_length=50, verbose_name='市', choices=())
+#     area= models.CharField(max_length=50, verbose_name='区', choices=())
 
 # ---------------------------------------
+# 实验下拉联动方法二
+
+
+class Market(models.Model):
+    name = models.CharField(max_length=255)
+
+
+class Security(models.Model):
+    name = models.CharField(max_length=255)
+    market = models.ForeignKey(Market)
+
+
+class SecurityGroup(models.Model):
+    name = models.CharField(max_length=255)
+    market = models.ForeignKey(Market)
+    # securities = models.ManyToManyField(Security)
+    securities = models.ManyToManyField(Security, blank=True)
+# ================================================
+# 实验下拉联动方法三
 
 class FileType(models.Model):
     name=models.CharField(max_length=128)
 
     def __unicode__(self):
         return self.name
+
 
 class ManagedFile(models.Model):
     type = models.ForeignKey(FileType)
@@ -107,6 +130,7 @@ class ManagedFile(models.Model):
     def __unicode__(self):
         return self.content
 
+
 class Tag(models.Model):
     type = models.ForeignKey(FileType)
     m_file = models.ForeignKey(ManagedFile)
@@ -114,8 +138,9 @@ class Tag(models.Model):
     def __unicode__(self):
         return self.m_file
 
-    # def clean(self):
-    #     if self.m_file is None:
-    #         return
-    #     if self.type != self.m_file.type:
-    #         raise forms.ValidationError("File type does not match Tag type")
+    def clean(self):
+        if self.m_file is None:
+            return
+        if self.type != self.m_file.type:
+            raise forms.ValidationError("File type does not match Tag type")
+
