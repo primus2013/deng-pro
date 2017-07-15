@@ -1,12 +1,32 @@
 # -*- coding: utf-8 -*-
-from __future__ import unicode_literals
+# from __future__ import unicode_literals  #因为新建的归档日期格式化中的中文出错注释掉2017-7-15
 
 from django.db import models
 
 from django import forms
+
+
+
+
+
 # Create your models here.
 
 from django.contrib.auth.models import AbstractUser   # 此处是用户数据模型可以继承django已有的AbstractUser模型用（是一个关于用户的）
+
+# 新建一个数据处理方法，将数据内容按日期归档
+
+class RzxxManager(models.Manager):
+    def distinct_date(self):
+        distinct_date_list = []     # 存放处理结果
+        date_list = self.values('rzsj')
+        for date in date_list:
+            # date = date['rzsj'].strftime('%Y{y}%m{m}').format(y='年', m='月')
+            date = date['rzsj'].strftime('%Y/%m')
+            # date = date['rzsj'].strftime('%Y/%m文件存档')  # 用于改变获得的数据格式
+            if date not in distinct_date_list:
+                distinct_date_list.append(date)
+        return distinct_date_list
+
 
 
 class User(AbstractUser):
@@ -72,19 +92,25 @@ class Sbxh(models.Model):
 
 
 class Rzxx(models.Model):
-    yymc=models.ForeignKey(Yyxx, null=True, verbose_name='医院名称')
+    yymc=models.ForeignKey(Yyxx, verbose_name='医院名称')
     # sbcj=models.CharField(max_length=50, null=True, verbose_name='设备厂家')
-    sbcj=models.ForeignKey(Sbcj, null=True, verbose_name='设备厂家')
+    sbcj=models.ForeignKey(Sbcj, verbose_name='设备厂家')
     sbxh=models.ForeignKey(Sbxh, max_length=50, verbose_name='设备型号')
     # rzsj=models.DateTimeField(auto_now_add=True, verbose_name='入组时间')
     bz=models.TextField(max_length=500, null=True, verbose_name='备注')
     rzsj = models.DateTimeField(verbose_name='入组时间')
+
+    # 将在models.py里定义的类关联进来
+    objects = RzxxManager()
+
     class Meta:
         verbose_name='入组信息'
         verbose_name_plural = verbose_name
 
     def __unicode__(self):
-        return self.yymc
+        return str('self.yymc')
+
+
 
 # 实验下拉联动
 # ---------------------------------------
@@ -99,48 +125,48 @@ class Rzxx(models.Model):
 # 实验下拉联动方法二
 
 
-class Market(models.Model):
-    name = models.CharField(max_length=255)
-
-
-class Security(models.Model):
-    name = models.CharField(max_length=255)
-    market = models.ForeignKey(Market)
-
-
-class SecurityGroup(models.Model):
-    name = models.CharField(max_length=255)
-    market = models.ForeignKey(Market)
-    # securities = models.ManyToManyField(Security)
-    securities = models.ManyToManyField(Security, blank=True)
+# class Market(models.Model):
+#     name = models.CharField(max_length=255)
+#
+#
+# class Security(models.Model):
+#     name = models.CharField(max_length=255)
+#     market = models.ForeignKey(Market)
+#
+#
+# class SecurityGroup(models.Model):
+#     name = models.CharField(max_length=255)
+#     market = models.ForeignKey(Market)
+#     # securities = models.ManyToManyField(Security)
+#     securities = models.ManyToManyField(Security, blank=True)
 # ================================================
 # 实验下拉联动方法三
 
-class FileType(models.Model):
-    name=models.CharField(max_length=128)
-
-    def __unicode__(self):
-        return self.name
-
-
-class ManagedFile(models.Model):
-    type = models.ForeignKey(FileType)
-    content = models.CharField(max_length=50)
-
-    def __unicode__(self):
-        return self.content
-
-
-class Tag(models.Model):
-    type = models.ForeignKey(FileType)
-    m_file = models.ForeignKey(ManagedFile)
-
-    def __unicode__(self):
-        return self.m_file
-
-    def clean(self):
-        if self.m_file is None:
-            return
-        if self.type != self.m_file.type:
-            raise forms.ValidationError("File type does not match Tag type")
+# class FileType(models.Model):
+#     name=models.CharField(max_length=128)
+#
+#     def __unicode__(self):
+#         return self.name
+#
+#
+# class ManagedFile(models.Model):
+#     type = models.ForeignKey(FileType)
+#     content = models.CharField(max_length=50)
+#
+#     def __unicode__(self):
+#         return self.content
+#
+#
+# class Tag(models.Model):
+#     type = models.ForeignKey(FileType)
+#     m_file = models.ForeignKey(ManagedFile)
+#
+#     def __unicode__(self):
+#         return self.m_file
+#
+#     def clean(self):
+#         if self.m_file is None:
+#             return
+#         if self.type != self.m_file.type:
+#             raise forms.ValidationError("File type does not match Tag type")
 

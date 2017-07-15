@@ -1099,3 +1099,351 @@ Traceback (most recent call last):
   File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 642, in get_form
     % (e, self.__class__.__name__))
 FieldError: Unknown field(s) (sbcj, rzsj, yymc, bz, sbxh) specified for FooModel. Check fields/fieldsets/exclude attributes of class RzxxAdmin.
+2017-07-13 20:49:35,381 [Thread-16:4688] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-07-13 20:49:54,614 [Thread-26:22628] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/Acc/securitygroup/add/
+Traceback (most recent call last):
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 1437, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 1367, in changeform_view
+    ModelForm = self.get_form(request, obj)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 605, in get_form
+    fields = flatten_fieldsets(self.get_fieldsets(request, obj))
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 296, in get_fieldsets
+    return [(None, {'fields': self.get_fields(request, obj)})]
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 594, in get_fields
+    form = self.get_form(request, obj, fields=None)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 639, in get_form
+    return modelform_factory(self.model, **defaults)
+  File "C:\mypro\flxm\lib\site-packages\django\forms\models.py", line 545, in modelform_factory
+    return type(form)(class_name, (form,), form_class_attrs)
+  File "C:\mypro\flxm\lib\site-packages\django\forms\models.py", line 247, in __new__
+    opts.field_classes)
+  File "C:\mypro\flxm\lib\site-packages\django\forms\models.py", line 176, in fields_for_model
+    formfield = formfield_callback(f, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 147, in formfield_for_dbfield
+    formfield = self.formfield_for_manytomany(db_field, request, **kwargs)
+  File "C:\mypro\fl_kt\Acc\admin.py", line 64, in formfield_for_manytomany
+    kwargs['queryset'] = EmptyQuerySet()
+NameError: global name 'EmptyQuerySet' is not defined
+2017-07-13 20:51:00,084 [Thread-8:4080] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/Acc/securitygroup/add/
+Traceback (most recent call last):
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 172, in get_response
+    response = response.render()
+  File "C:\mypro\flxm\lib\site-packages\django\template\response.py", line 160, in render
+    self.content = self.rendered_content
+  File "C:\mypro\flxm\lib\site-packages\django\template\response.py", line 137, in rendered_content
+    content = template.render(context, self._request)
+  File "C:\mypro\flxm\lib\site-packages\django\template\backends\django.py", line 95, in render
+    return self.template.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 206, in render
+    return self._render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\loader_tags.py", line 209, in render
+    return template.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 208, in render
+    return self._render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\defaulttags.py", line 326, in render
+    return nodelist.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\defaulttags.py", line 326, in render
+    return nodelist.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 1049, in render
+    return render_value_in_context(output, context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 1026, in render_value_in_context
+    value = force_text(value)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\encoding.py", line 78, in force_text
+    s = six.text_type(s)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\html.py", line 381, in <lambda>
+    klass.__unicode__ = lambda self: mark_safe(klass_unicode(self))
+  File "C:\mypro\flxm\lib\site-packages\django\forms\boundfield.py", line 43, in __str__
+    return self.as_widget()
+  File "C:\mypro\flxm\lib\site-packages\django\forms\boundfield.py", line 101, in as_widget
+    return force_text(widget.render(name, self.value(), attrs=attrs))
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\widgets.py", line 291, in render
+    'widget': self.widget.render(name, value, *args, **kwargs),
+  File "C:\mypro\flxm\lib\site-packages\django\forms\widgets.py", line 528, in render
+    options = self.render_options(choices, [value])
+  File "C:\mypro\flxm\lib\site-packages\django\forms\widgets.py", line 554, in render_options
+    for option_value, option_label in chain(self.choices, choices):
+  File "C:\mypro\flxm\lib\site-packages\django\forms\models.py", line 1109, in __iter__
+    for obj in queryset:
+  File "C:\mypro\flxm\lib\site-packages\django\db\models\query.py", line 52, in __iter__
+    results = compiler.execute_sql()
+  File "C:\mypro\flxm\lib\site-packages\django\db\models\sql\compiler.py", line 848, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\mypro\flxm\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\mypro\flxm\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\mypro\flxm\lib\site-packages\django\db\utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\mypro\flxm\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\mypro\flxm\lib\site-packages\django\db\backends\mysql\base.py", line 112, in execute
+    return self.cursor.execute(query, args)
+  File "C:\mypro\flxm\lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+  File "C:\mypro\flxm\lib\site-packages\pymysql\cursors.py", line 308, in _query
+    conn.query(q)
+  File "C:\mypro\flxm\lib\site-packages\pymysql\connections.py", line 820, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\mypro\flxm\lib\site-packages\pymysql\connections.py", line 1002, in _read_query_result
+    result.read()
+  File "C:\mypro\flxm\lib\site-packages\pymysql\connections.py", line 1285, in read
+    first_packet = self.connection._read_packet()
+  File "C:\mypro\flxm\lib\site-packages\pymysql\connections.py", line 966, in _read_packet
+    packet.check_error()
+  File "C:\mypro\flxm\lib\site-packages\pymysql\connections.py", line 394, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\mypro\flxm\lib\site-packages\pymysql\err.py", line 120, in raise_mysql_exception
+    _check_mysql_exception(errinfo)
+  File "C:\mypro\flxm\lib\site-packages\pymysql\err.py", line 112, in _check_mysql_exception
+    raise errorclass(errno, errorvalue)
+ProgrammingError: (1146, u"Table 'flaccdb.acc_market' doesn't exist")
+2017-07-14 19:54:19,276 [Thread-15:14264] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-07-14 20:01:01,739 [Thread-117:22000] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/Acc/rzxx/add/
+Traceback (most recent call last):
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 1437, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\mypro\flxm\lib\site-packages\django\utils\decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 1382, in changeform_view
+    self.log_addition(request, new_object, change_message)
+  File "C:\mypro\flxm\lib\site-packages\django\contrib\admin\options.py", line 714, in log_addition
+    object_repr=force_text(object),
+  File "C:\mypro\flxm\lib\site-packages\django\utils\encoding.py", line 88, in force_text
+    raise DjangoUnicodeDecodeError(s, *e.args)
+DjangoUnicodeDecodeError: 'ascii' codec can't decode byte 0xe8 in position 0: ordinal not in range(128). You passed in <Rzxx: [Bad Unicode data]> (<class 'Acc.models.Rzxx'>)
+2017-07-14 20:04:04,178 [Thread-37:18380] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-07-15 14:16:30,740 [Thread-20:5068] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-07-15 14:49:01,374 [Thread-13:21848] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-07-15 15:12:05,339 [Thread-2:20548] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\mypro\fl_kt\Acc\views.py", line 21, in index
+    for a in Rzxx.objects.distinct_date():
+  File "C:\mypro\fl_kt\Acc\models.py", line 18, in distinct_date
+    date = date['rzsj'].strftime('%Y/%m鏂囦欢瀛樻。')  # 鐢ㄤ簬鏀瑰彉鑾峰緱鐨勬暟鎹牸寮?UnicodeEncodeError: 'ascii' codec can't encode characters in position 5-8: ordinal not in range(128)
+2017-07-15 15:13:23,888 [Thread-8:21972] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\mypro\fl_kt\Acc\views.py", line 21, in index
+    for a in Rzxx.objects.distinct_date():
+  File "C:\mypro\fl_kt\Acc\models.py", line 18, in distinct_date
+    date = date['rzsj'].strftime('%Y/%m鏂囦欢瀛樻。')  # 鐢ㄤ簬鏀瑰彉鑾峰緱鐨勬暟鎹牸寮?UnicodeEncodeError: 'ascii' codec can't encode characters in position 5-8: ordinal not in range(128)
+2017-07-15 15:13:28,586 [Thread-9:8636] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\mypro\fl_kt\Acc\views.py", line 21, in index
+    for a in Rzxx.objects.distinct_date():
+  File "C:\mypro\fl_kt\Acc\models.py", line 18, in distinct_date
+    date = date['rzsj'].strftime('%Y/%m鏂囦欢瀛樻。')  # 鐢ㄤ簬鏀瑰彉鑾峰緱鐨勬暟鎹牸寮?UnicodeEncodeError: 'ascii' codec can't encode characters in position 5-8: ordinal not in range(128)
+2017-07-15 15:15:32,793 [Thread-2:13756] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\mypro\fl_kt\Acc\views.py", line 21, in index
+    for a in Rzxx.objects.distinct_date():
+  File "C:\mypro\fl_kt\Acc\models.py", line 18, in distinct_date
+    date = date['rzsj'].strftime('%Y%m鏂囦欢瀛樻。')  # 鐢ㄤ簬鏀瑰彉鑾峰緱鐨勬暟鎹牸寮?UnicodeEncodeError: 'ascii' codec can't encode characters in position 4-7: ordinal not in range(128)
+2017-07-15 20:18:02,977 [Thread-97:18664] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\mypro\fl_kt\Acc\views.py", line 43, in index
+    return render(request, 'index.html', locals())
+  File "C:\mypro\flxm\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\mypro\flxm\lib\site-packages\django\template\loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "C:\mypro\flxm\lib\site-packages\django\template\backends\django.py", line 95, in render
+    return self.template.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 206, in render
+    return self._render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\defaulttags.py", line 513, in render
+    six.reraise(*exc_info)
+  File "C:\mypro\flxm\lib\site-packages\django\template\defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\mypro\flxm\lib\site-packages\django\core\urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\mypro\flxm\lib\site-packages\django\core\urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'Rzxx' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2017-07-15 21:21:12,338 [Thread-118:30392] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:/mypro/fl_kt\Acc\views.py", line 44, in index
+    return render(request, 'index.html', locals())
+  File "C:\mypro\flxm\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\mypro\flxm\lib\site-packages\django\template\loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "C:\mypro\flxm\lib\site-packages\django\template\backends\django.py", line 95, in render
+    return self.template.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 206, in render
+    return self._render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 1043, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 709, in resolve
+    obj = self.var.resolve(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 913, in _resolve_lookup
+    current = current()
+  File "C:\mypro\flxm\lib\site-packages\django\core\paginator.py", line 141, in previous_page_number
+    return self.paginator.validate_number(self.number - 1)
+  File "C:\mypro\flxm\lib\site-packages\django\core\paginator.py", line 38, in validate_number
+    raise EmptyPage('That page number is less than 1')
+EmptyPage: That page number is less than 1

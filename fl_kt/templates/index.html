@@ -6,13 +6,13 @@
     {% include 'ad.html' %}
 
     <div class="topnews">
-        {% for article in rz_list %}
+        {% for Rzxx in rz_list %}
           <div class="blogs">
             <figure><img src="/static/img/04.jpg"></figure>
             <ul>
               <h3><a href="/">{{ Rzxx.yymc }}֪</a></h3>
-              <p>{{ Rzxx.sbcj }}</p>
-              <p class="autor"><span class="lm f_l"><a href="/">个人博客</a></span><span class="dtime f_l">{{Rzxx.rzsj | date:'y-m-d' }}</span><span class="viewnum f_r">浏览<a href="/">459</a></span><span class="pingl f_r">评论<a href="/">30</a></span></p>
+              <p>{{ Rzxx.bz }}</p>
+              <p class="autor"><span class="lm f_l"><a href="/">{{Rzxx.sbcj}}</a></span><span class="dtime f_l">{{Rzxx.rzsj | date:'y-m-d' }}</span><span class="viewnum f_r">浏览<a href="/">459</a></span><span class="pingl f_r">评论<a href="/">30</a></span></p>
             </ul>
           </div>
         {% endfor %}
@@ -28,13 +28,13 @@
         <div id="pagination">
         <ul id="pagination-flickr">
         {% if rz_list.has_previous %}
-            <li class="previous"><a href="?jage={{ rz_list.previous_page_number }}">&laquo
+            <li class="previous"><a href="?page={{ rz_list.previous_page_number }}">&laquo
             {% else %}
             <li class="previous-off">&laquo;上一页</li>
             {% endif %}
-            <li class="active">{{ rz_list.number }}/{{ rz_list.paginator.num_jage}}
+            <li class="active">{{ rz_list.number }}/{{ rz_list.paginator.num_pages}}
             {% if article_list.has_next %}
-               <li class="nexe"><a href="?page={{ rz_list.next_page_number }}">下一页 &raquo
+               <li class="next"><a href="?page={{ rz_list.next_page_number }}">下一页 &raquo
             {% else %}
                <li class="next-off" >下一页 &raquo;</li>
         {% endif %}
