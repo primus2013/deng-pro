@@ -1,3 +1,4 @@
+#-*- coding: utf-8 -*-
 """fl_kt URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -13,12 +14,9 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.contrib import admin
 from django.conf import settings
-
-from Acc.views import index, archive_rzxx
-
 from Acc.upload import upload_image
 
 urlpatterns = [
@@ -27,7 +25,7 @@ urlpatterns = [
             {"document_root": settings.MEDIA_ROOT}),
         url(r'admin/upload/(?P<dir_name>[^/]+)$', upload_image, name='upload_image'),
         url(r'^admin/', admin.site.urls),
-        url(r'^$', index, name='index'),
-        url(r'^archive$', archive_rzxx, name='archive'),
-       ]
+        url(r'^admin/', include(admin.site.urls)),
+        url(r'^', include('Acc.urls')),   # 让程序默认找到Acc下的Urls.py
+]
 

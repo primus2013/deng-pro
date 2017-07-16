@@ -67,6 +67,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'Acc.views.global_setting',
             ],
         },
     },
@@ -145,6 +146,8 @@ STATIC_ROOT = '/'
 MEDIA_URL = '/uploads/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads',)
 
+SITE_NAME = "试试就试试"
+SITE_DESC = "犟是一种性格"
 
 # 网络下载的日志器
 # 导入模块

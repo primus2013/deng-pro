@@ -1447,3 +1447,30 @@ Traceback (most recent call last):
   File "C:\mypro\flxm\lib\site-packages\django\core\paginator.py", line 38, in validate_number
     raise EmptyPage('That page number is less than 1')
 EmptyPage: That page number is less than 1
+2017-07-16 09:12:38,836 [Thread-17:14768] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-07-16 09:12:58,275 [Thread-57:20744] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-07-16 11:30:36,270 [Thread-2:27732] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /archive
+Traceback (most recent call last):
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\mypro\fl_kt\Acc\views.py", line 69, in archive_rzxx
+    return render(request, 'archive.html', locals())
+  File "C:\mypro\flxm\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\mypro\flxm\lib\site-packages\django\template\loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "C:\mypro\flxm\lib\site-packages\django\template\backends\django.py", line 95, in render
+    return self.template.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 204, in render
+    with context.bind_template(self):
+  File "c:\python27\Lib\contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "C:\mypro\flxm\lib\site-packages\django\template\context.py", line 260, in bind_template
+    updates.update(processor(self.request))
+  File "C:\mypro\fl_kt\Acc\views.py", line 25, in global_setting
+    'SITE_DESC': settings.SITE_DESC, }
+  File "C:\mypro\flxm\lib\site-packages\django\conf\__init__.py", line 56, in __getattr__
+    return getattr(self._wrapped, name)
+AttributeError: 'Settings' object has no attribute 'SITE_DESC'
