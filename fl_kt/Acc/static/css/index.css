@@ -72,19 +72,6 @@
 .links ul li { float: left; padding: 5px 8px }
 .links ul li a:hover { color: #000 }
 
- /*分页 */
-/*#pagination-flickr li {*/
-    /*display: inline-block;*/
-    /*!*float:right;*!*/
-    /*!*padding: 0;*!*/
-    /*!*margin: 0;*!*/
-/*}*/
 
-#pagination li {
-    display: inline-block;
-    /*float:right;*/
-    /*padding: 0;*/
-    /*margin: 0;*/
-}
 
 

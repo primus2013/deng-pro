@@ -1,6 +1,7 @@
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 from django.shortcuts import render
 from django.conf import settings
+from django.db.models import Count  # 引入计数模块
 from models import *
 from django.core.paginator import Paginator, InvalidPage, EmptyPage, PageNotAnInteger
 

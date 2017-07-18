@@ -47,9 +47,10 @@ class User(AbstractUser):
 
 
 class Yyxx(models.Model):
+    dengj = models.CharField(max_length=50, verbose_name='医院等级')
     yymc = models.CharField(max_length=50, verbose_name='医院名称')
     shengf = models.CharField(max_length=50, verbose_name='所在省份')
-    dengj = models.CharField(max_length=50, verbose_name='医院等级')
+    # dengj = models.CharField(max_length=50, verbose_name='医院等级')
 
     class Meta:
         verbose_name = '医院字典'
@@ -62,7 +63,7 @@ class Yyxx(models.Model):
 
 # 厂家字典
 class Sbcj(models.Model):
-    cjmc = models.CharField(max_length=50, null=True, verbose_name='厂家名称')
+    cjmc = models.CharField(max_length=50, verbose_name='厂家名称')
     szdq = models.CharField(max_length=50, verbose_name='所在地区')
 
     class Meta:
@@ -110,7 +111,15 @@ class Rzxx(models.Model):
     def __unicode__(self):
         return str('self.yymc')
 
-
+# class SumTS(models.Model):
+#     sbjs = models.ForeignKey(Rzxx, verbose_name='设备计数')
+#
+#     class Meta:
+#         verbose_name = '设备数量'
+#         verbose_name_plural = verbose_name
+#
+#     def __unicode__(self):
+#         return str('self.sbcj')
 
 # 实验下拉联动
 # ---------------------------------------
