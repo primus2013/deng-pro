@@ -21,17 +21,30 @@ logger = logging.getLogger('Acc.views')
 # 使用时只要在模板中调用它的名字就可以了
 
 def global_setting(request):
+    # 站点基本信息
+    # SITE_URL = settings.SITE_URL
+    SITE_NAME = settings.SITE_NAME
+    SITE_DESC = settings.SITE_DESC
+
     # 归档栏目的数据列表
     Rzxx_list = Rzxx.objects.distinct_date()
 
     # 导航数据
     yy_list = Yyxx.objects.all()[:4]
 
-    return {'Rzxx_list': Rzxx_list,
-            'yy_list': yy_list,
-            'SITE_NAME': settings.SITE_NAME,
-            'SITE_DESC': settings.SITE_DESC, }
+    # 为了使用return locals() 的方法，将原来下面的return方式改为
+    # 1.站点基本信息部分（因为下表中没有变量值，改到上面部分赋值给变量，然后才能一起进入locals()进行传递）
+    # 2.其他变量列表方式
+    # return {'Rzxx_list': Rzxx_list,
+    #         'yy_list': yy_list,
+    #         'SITE_NAME': settings.SITE_NAME,
+    #         'SITE_DESC': settings.SITE_DESC, }
 
+    # 跨表进行统计查询（聚合合计）示例
+    # 评论排行
+    comment_count_list = Comment.objects.values('article').annotate(comment_count=Count('article')).order_by('-comment_count')
+    article_comment_list = [Article.objects.get(pk=comment['article']) for comment in comment_count_list]
+    return locals()
 
 def index(request):
     try:
@@ -78,4 +91,6 @@ def getPage(request, page_list):
 
     return page_list
 
+
+# 跨表进行统计查询（聚合合计）示例
 

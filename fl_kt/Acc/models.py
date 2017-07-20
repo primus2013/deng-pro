@@ -111,6 +111,48 @@ class Rzxx(models.Model):
     def __unicode__(self):
         return str('self.yymc')
 
+# 文章模型
+class Article(models.Model):
+    title = models.CharField(max_length=50, verbose_name='文章标题')
+    desc = models.CharField(max_length=50, verbose_name='文章描述')
+    content = models.TextField(verbose_name='文章内容')
+    click_count = models.IntegerField(default=0, verbose_name='点击次数')
+    is_recommend = models.BooleanField(default=False, verbose_name='是否推荐')
+    date_publish = models.DateTimeField(auto_now_add=True, verbose_name='发布时间')
+    # user = models.ForeignKey(User, verbose_name='用户')
+    # category = models.ForeignKey(Category, blank=True, null=True, verbose_name='分类')
+    # tag = models.ManyToManyField(Tag, verbose_name='标签')
+
+    # objects = ArticleManager()
+
+    class Meta:
+        verbose_name = '文章'
+        verbose_name_plural = verbose_name
+        ordering = ['-date_publish']
+
+    def __unicode__(self):
+        return self.title
+
+# 评论模型
+class Comment(models.Model):
+    content = models.TextField(verbose_name='评论内容')
+    # username = models.CharField(max_length=30, blank=True, null=True, verbose_name='用户名')
+    # email = models.EmailField(max_length=50, blank=True, null=True, verbose_name='邮箱地址')
+    # url = models.URLField(max_length=100, blank=True, null=True, verbose_name='个人网页地址')
+    # date_publish = models.DateTimeField(auto_now_add=True, verbose_name='发布时间')
+    # user = models.ForeignKey(User, blank=True, null=True, verbose_name='用户')
+    article = models.ForeignKey(Article, blank=True, null=True, verbose_name='文章')
+    pid = models.ForeignKey('self', blank=True, null=True, verbose_name='父级评论')
+
+    class Meta:
+        verbose_name = '评论'
+        verbose_name_plural = verbose_name
+
+    def __unicode__(self):
+        return str(self.id)
+
+
+
 # class SumTS(models.Model):
 #     sbjs = models.ForeignKey(Rzxx, verbose_name='设备计数')
 #

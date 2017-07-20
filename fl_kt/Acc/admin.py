@@ -103,5 +103,8 @@ admin.site.register(Rzxx, RzxxAdmin)
 admin.site.register(Sbcj)
 admin.site.register(Sbxh)
 
+admin.site.register(Article)
+admin.site.register(Comment)
+
 # admin.site.register(FooModel, FooAdmin)
 

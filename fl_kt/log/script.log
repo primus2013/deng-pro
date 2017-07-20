@@ -1553,3 +1553,54 @@ Traceback (most recent call last):
   File "C:\mypro\flxm\lib\site-packages\pymysql\err.py", line 115, in _check_mysql_exception
     raise InternalError(errno, errorvalue)
 InternalError: (1054, u"Unknown column 'Acc_rzxx.yymc_id' in 'field list'")
+2017-07-20 20:38:29,818 [Thread-3:14736] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\mypro\fl_kt\Acc\views.py", line 64, in index
+    return render(request, 'index.html', locals())
+  File "C:\mypro\flxm\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\mypro\flxm\lib\site-packages\django\template\loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "C:\mypro\flxm\lib\site-packages\django\template\backends\django.py", line 95, in render
+    return self.template.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 204, in render
+    with context.bind_template(self):
+  File "c:\python27\Lib\contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "C:\mypro\flxm\lib\site-packages\django\template\context.py", line 260, in bind_template
+    updates.update(processor(self.request))
+  File "C:\mypro\fl_kt\Acc\views.py", line 25, in global_setting
+    SITE_URL = settings.SITE_URL
+  File "C:\mypro\flxm\lib\site-packages\django\conf\__init__.py", line 56, in __getattr__
+    return getattr(self._wrapped, name)
+AttributeError: 'Settings' object has no attribute 'SITE_URL'
+2017-07-20 20:38:31,553 [Thread-2:14876] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-07-20 20:39:16,308 [Thread-8:22240] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\mypro\flxm\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\mypro\fl_kt\Acc\views.py", line 64, in index
+    return render(request, 'index.html', locals())
+  File "C:\mypro\flxm\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\mypro\flxm\lib\site-packages\django\template\loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "C:\mypro\flxm\lib\site-packages\django\template\backends\django.py", line 95, in render
+    return self.template.render(context)
+  File "C:\mypro\flxm\lib\site-packages\django\template\base.py", line 204, in render
+    with context.bind_template(self):
+  File "c:\python27\Lib\contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "C:\mypro\flxm\lib\site-packages\django\template\context.py", line 260, in bind_template
+    updates.update(processor(self.request))
+  File "C:\mypro\fl_kt\Acc\views.py", line 25, in global_setting
+    # SITE_URL = settings.SITE_URL
+  File "C:\mypro\flxm\lib\site-packages\django\conf\__init__.py", line 56, in __getattr__
+    return getattr(self._wrapped, name)
+AttributeError: 'Settings' object has no attribute 'SITE_URL'
